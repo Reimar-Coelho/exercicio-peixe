@@ -12,27 +12,27 @@ var config = {
 
 var game = new Phaser.Game(config);
 
-var peixinho;
+var fish;
 
 function preload() {
-    this.load.image('mar', './assets/bg_azul-escuro.png');
+    this.load.image('sea', './assets/bg_azul-escuro.png');
 
     //load logo
     this.load.image('logo', './assets/logo-inteli_branco.png');
 
     //load fish
-    this.load.image('peixe', './assets/peixes/peixe_listra.png')
+    this.load.image('fish', './assets/peixes/peixe_listra.png')
 }
 
 function create() {
-    this.add.image(400, 300, 'mar');
+    this.add.image(400, 300, 'sea');
 
     //add logo to screen
     this.add.image(400, 525, 'logo').setScale(0.5);
 
-    peixinho = this.add.image(400, 300, 'peixe');
+    fish = this.add.image(400, 300, 'fish');
 
-    peixinho.setFlip(true, false);
+    fish.setFlip(true, false);
 
     this.add.text(30, 20, 'Meu nome é Reimar :)', { font: '36px Al Nile'});
 
@@ -41,6 +41,6 @@ function create() {
 
 function update() {
     // add controls to fish
-    peixinho.x = this.input.x;
-    peixinho.y = this.input.y;
+    fish.x = this.input.x;
+    fish.y = this.input.y;
 }
