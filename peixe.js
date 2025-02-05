@@ -33,6 +33,9 @@ function create() {
     peixinho = this.add.image(400, 300, 'peixe');
 
     peixinho.setFlip(true, false);
+
+    this.add.text(30, 20, 'Meu nome é Reimar :)', { font: '36px Al Nile'});
+
     
 }
 
